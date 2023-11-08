@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
+import PropTypes from 'prop-types';
 
 const Computers = ({isMobile}) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
@@ -30,6 +31,11 @@ const Computers = ({isMobile}) => {
     </mesh>
   )
 }
+
+Computers.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+}
+
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
