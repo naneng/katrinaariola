@@ -3,14 +3,13 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const Computers = ({isMobile}) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
 
   return (
     <mesh>
-      {/* eslint-disable react/no-unknown-property */}
       <hemisphereLight intensity={0.95} groundColor="black" />
       <pointLight intensity={2} />
       <spotLight
@@ -27,14 +26,13 @@ const Computers = ({isMobile}) => {
         position={isMobile ? [0,-3,-2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01,-0.2,-0.1]}
         />
-        {/* eslint-enable react/no-unknown-property */}
     </mesh>
   )
 }
 
-Computers.propTypes = {
-  isMobile: PropTypes.bool.isRequired,
-}
+// Computers.propTypes = {
+//   isMobile: PropTypes.bool.isRequired,
+// }
 
 
 const ComputersCanvas = () => {
@@ -72,7 +70,7 @@ const ComputersCanvas = () => {
       shadows
       dpr={[1,2]}
       camera={{ position: [25, 3, 5], fov: 25 }}
-      gl={{preserveDrawingBuffer: true}}
+      gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls

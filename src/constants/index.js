@@ -121,16 +121,18 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Web Specialist",
-    company_name: "Temple University Campus Recreation",
-    icon: temple,
+    title: "Web Developer Intern",
+    company_name: "Hardboot Inc.",
+    icon: hardboot,
     iconBg: "#250657",
-    date: "Aug 2008 - Dec 2010",
+    date: "May 2023 - Sep 2023",
     points: [
-      "Managed and maintained department website to match various team specifications ensuring up-to- date contents and active links.",
-      "Designed layouts, graphics, icons, logos and created and/or incorporated color scheme based on internal website requests.",
-      "Researched and evaluated new design trends.",
-      "Performed software and hardware installations and updates for office computers associated devises.",
+      "Prepared website low-fidelity wireframes and high-fidelity mockups for developers and project managers.",
+      "Created branding and logos incorporating desired visual elements using Figma.",
+      "Engaged with personnel to turn mock-ups, wireframes and conceptual drawings into functional web pages in Wordpress.",
+      "Brainstormed and executed strategies to increase business and drive profit growth.",
+      "Maintained consistent style across platforms and browsers through skilled handling of CSS changes.",
+      "Designed and implemented new features and functionality for WordPress themes.",
     ],
   },
   {
@@ -150,20 +152,20 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer Intern",
-    company_name: "Hardboot Inc.",
-    icon: hardboot,
+    title: "Web Specialist",
+    company_name: "Temple University Campus Recreation",
+    icon: temple,
     iconBg: "#250657",
-    date: "May 2023 - Sep 2023",
+    date: "Aug 2008 - Dec 2010",
     points: [
-      "Prepared website low-fidelity wireframes and high-fidelity mockups for developers and project managers.",
-      "Created branding and logos incorporating desired visual elements using Figma.",
-      "Engaged with personnel to turn mock-ups, wireframes and conceptual drawings into functional web pages in Wordpress.",
-      "Brainstormed and executed strategies to increase business and drive profit growth.",
-      "Maintained consistent style across platforms and browsers through skilled handling of CSS changes.",
-      "Designed and implemented new features and functionality for WordPress themes.",
+      "Managed and maintained department website to match various team specifications ensuring up-to- date contents and active links.",
+      "Designed layouts, graphics, icons, logos and created and/or incorporated color scheme based on internal website requests.",
+      "Researched and evaluated new design trends.",
+      "Performed software and hardware installations and updates for office computers associated devises.",
     ],
   },
+  
+  
  
 ];
 
@@ -217,24 +219,6 @@ const projects = [
     source_code_link: "https://naneng.github.io/moody/",
   },
   {
-    name: "Temperature Converter",
-    description:
-      "Web application that enables users to convert temperature degrees from celsius to fahrenheit.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-  
-      {
-        name: "javascript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: temperatureconverter,
-    source_code_link: "https://naneng.github.io/temperature-converter/",
-  },
-  {
     name: "Book Club",
     description:
       "A book repo that allows user to search and favorite books.",
@@ -271,6 +255,24 @@ const projects = [
     ],
     image: tictactoe,
     source_code_link: "https://naneng.github.io/tictactoe/",
+  },
+  {
+    name: "Temperature Converter",
+    description:
+      "Web application that enables users to convert temperature degrees from celsius to fahrenheit.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+  
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: temperatureconverter,
+    source_code_link: "https://naneng.github.io/temperature-converter/",
   },
 ];
 
