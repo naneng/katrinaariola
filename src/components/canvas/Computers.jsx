@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
@@ -12,12 +12,12 @@ const Computers = ({isMobile}) => {
     <mesh>
       {/* eslint-disable react/no-unknown-property */}
       <hemisphereLight intensity={0.95} groundColor="black" />
-      <pointLight intensity={1} />
+      <pointLight intensity={2} />
       <spotLight
         position={[-20, 50, 10]}
-        angle={0.12}
+        angle={0.32}
         penumbra={1}
-        intensity={1}
+        intensity={4}
         castShadow
         shadow-mapSize={1024}
       />
@@ -71,7 +71,7 @@ const ComputersCanvas = () => {
       frameLoop="demand"
       shadows
       dpr={[1,2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [25, 3, 5], fov: 25 }}
       gl={{preserveDrawingBuffer: true}}
     >
       <Suspense fallback={<CanvasLoader />}>

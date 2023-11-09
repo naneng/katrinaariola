@@ -1,16 +1,17 @@
-// import React from 'react';
-import Tilt from 'react-tilt';
+import React from 'react';
+import { Tilt }  from 'react-tilt';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
-import PropTypes from 'prop-types';
-import { SectionWrapper } from '../hoc';
+// import PropTypes from 'prop-types';
+import { SectionWrapper } from '../hoc/';
 
-// eslint-disable-next-line react-refresh/only-export-components
-const ServiceCard = ({ index, title, icon }) => 
-  (
+
+
+const ServiceCard = ({ index, title, icon }) => {
+  return (
     <Tilt
       options={{
         max: 45,
@@ -20,33 +21,34 @@ const ServiceCard = ({ index, title, icon }) =>
       className="xs:w-[250px] w-full"
     >
       <motion.div
-        variants={fadeIn("right","spring", index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+        className="w-full blue-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
           className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
         >
-        <img
-          src={icon}
-          alt="web-developer"
-          className="w-16 h-16 object-contain"
-        />
-        <h3 className="text-white text-[20px] font-bold text-center">
-          {title}</h3>
+          <img
+            src={icon}
+            alt="web-developer"
+            className="w-16 h-16 object-contain"
+          />
+          <h3 className="text-white text-[20px] font-bold text-center">
+            {title}</h3>
         </div>
 
       </motion.div>
     </Tilt>
   )
+}
+
+// ServiceCard.propTypes = {
+//   index: PropTypes.number.isRequired,
+//   title: PropTypes.string.isRequired,
+//   icon: PropTypes.string.isRequired,
+// };
 
 
-ServiceCard.propTypes = {
-  index: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-};
 
-// eslint-disable-next-line react-refresh/only-export-components
 const About = () => {
   return (
     <>
@@ -71,5 +73,5 @@ const About = () => {
   )
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
-export default SectionWrapper(About,"about");
+
+export default SectionWrapper(About, "about");

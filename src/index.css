@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800;900&display=swap'); */
 
 @import "tailwindcss/base";
 @import "tailwindcss/components"; 
@@ -12,7 +15,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: 'Inconsolata', monospace;
+  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'League Spartan', sans-serif; */
   scroll-behavior: smooth;
   color-scheme: dark;
 }
@@ -24,7 +30,7 @@
 }
 
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
+  background: rgb(32, 32, 36); /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
     #434343,
@@ -32,25 +38,26 @@
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #434343,
-    #000000
+    rgb(33, 33, 39),
+   rgb(32, 32, 36)
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: #444ae5;
+  background: linear-gradient(-90deg, #444ae5 0%, rgba(165, 85, 189, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #804dee 0%,
-    rgba(60, 51, 80, 0) 100%
+    #4F46E5 0%,
+    rgba(165, 85, 189, 0) 100%
   );
 }
 
-.green-pink-gradient {
-  background: "#00cea8";
-  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+
+.blue-pink-gradient {
+  background: "#444ae5";
+  background: linear-gradient(90.13deg, #444ae5 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #444ae5 1.9%, #bf61ff 97.5%);
 }
 
 .orange-text-gradient {

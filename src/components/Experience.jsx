@@ -8,7 +8,30 @@ import { experiences } from "../constants";
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
 
-// eslint-disable-next-line react-refresh/only-export-components
+const ExperienceCard = ({ experience }) => (
+  <VerticalTimelineElement
+    contentStyle={{
+      background: '#250657', color: '#FFF', 
+    }}
+    contentArrowStyle={{ borderRight: '5px solid ##250657' }}
+    date={experience.date}
+    iconStyle={{ background: experience.iconBg }}
+    icon={
+      <div className="flex justify-center items-center w-full h-full">
+        <img src={experience.icon}
+          alt={experience.company_name}
+        className="w-[60%] h-[60%] object-contain " />
+      </div>
+    }
+    // iconClassName={"blue-pink-gradient"}
+  >
+    <div>
+      <h3 className="text-white text-[24px] font-bold">
+        {experience.title}</h3>
+    </div>
+  </VerticalTimelineElement>
+)
+
 const Experience = () => {
   return (
     <>
@@ -21,6 +44,15 @@ const Experience = () => {
       </h2>
 
       </motion.div>
+
+      <div className="mt-20 flex flex-col">
+        <VerticalTimeline>
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience}/>
+          ))}
+        </VerticalTimeline>
+
+      </div>
     </>
   )
 }
