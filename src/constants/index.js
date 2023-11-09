@@ -8,13 +8,14 @@ import {
   html,
   css,
   reactjs,
-  redux,
+  p5,
   tailwind,
   nodejs,
   mongodb,
+  sql,
   git,
   figma,
-  docker,
+  canva,
   temple,
   lewagon,
   hardboot,
@@ -80,8 +81,12 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "p5",
+    icon: p5,
+  },
+  {
+    name: "sql",
+    icon: sql,
   },
   {
     name: "Tailwind CSS",
@@ -108,8 +113,8 @@ const technologies = [
     icon: figma,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "canva",
+    icon: canva,
   },
 ];
 
