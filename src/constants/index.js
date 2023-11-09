@@ -19,9 +19,10 @@ import {
   temple,
   lewagon,
   hardboot,
-  carrent,
-  jobit,
-  tripguide,
+  moody,
+  temperatureconverter,
+  bookclub,
+  tictactoe,
   threejs,
 } from "../assets";
 
@@ -195,58 +196,55 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Moody",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Interactive app that allows user to change background and font color.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "lodash",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "yup",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: moody,
+    source_code_link: "https://naneng.github.io/moody/",
   },
   {
-    name: "Job IT",
+    name: "Temperature Converter",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables users to convert temperature degrees from celsius to fahrenheit.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+  
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: temperatureconverter,
+    source_code_link: "https://naneng.github.io/temperature-converter/",
+  },
+  {
+    name: "Book Club",
+    description:
+      "A book repo that allows user to search and favorite books.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
+        name: "lodash",
         color: "green-text-gradient",
       },
       {
@@ -254,8 +252,25 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: bookclub,
+    source_code_link: "https://naneng.github.io/book-club/",
+  },
+  {
+    name: "TicTacToe",
+    description:
+      "Tictactoe game app that displays player turns and movements",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tictactoe,
+    source_code_link: "https://naneng.github.io/tictactoe/",
   },
 ];
 

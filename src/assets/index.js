@@ -26,9 +26,10 @@ import hardboot from "./company/hardboot.png";
 import temple from "./company/temple.png";
 import lewagon from "./company/lewagon.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import moody from "./moody.png";
+import temperatureconverter from "./temperatureconverter.png";
+import bookclub from "./bookclub.png";
+import tictactoe from "./tictactoe.png";
 
 export {
   logo,
@@ -56,7 +57,8 @@ export {
   hardboot,
   temple,
   lewagon,
-  carrent,
-  jobit,
-  tripguide,
+  moody,
+  temperatureconverter,
+  bookclub,
+  tictactoe
 };
