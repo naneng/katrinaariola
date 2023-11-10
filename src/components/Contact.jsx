@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from "@emailjs/browser";
 // import { Formik, Form, Field } from 'formik';
-// import * as Yup from 'yup';
+import * as Yup from 'yup';
 
 import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
@@ -29,6 +29,13 @@ const Contact = () => {
     setForm({...form, [name]: value})
   }
 
+  // const validationSchema = Yup.object({
+  //   name: Yup.string().required('Name is required'),
+  //   email: Yup.string().email('Invalid email').required('Email is required'),
+  //   message: Yup.string().required('Message is required')
+  // });
+
+
   const handleSubmit = (e) => { 
     e.preventDefault();
     setLoading(true);
@@ -36,6 +43,8 @@ const Contact = () => {
     emailjs.send(
       'service_lp4pfm5',
       'template_84txx99',
+      // process.env.EMAILJS_SERVICE_ID,
+      // process.env.EMAILJS_TEMPLATE_ID,
       {
         from_name: form.name,
         to_name: 'Katrina',
@@ -44,6 +53,7 @@ const Contact = () => {
         message: form.message,
       },
       'HH5EwaZnD7e2OKCbF'
+      // process.env.EMAILJS_PUBLIC_KEY
     )
       .then(() => {
         setLoading(false);
@@ -64,7 +74,7 @@ const Contact = () => {
         console.log(error);
         // alert('Something went wrong.')
     })
-    // debugger;
+   
   }
 
   return (
@@ -129,7 +139,7 @@ const Contact = () => {
         </form>
 
           {emailSent && (
-            <div className="alert success text-primary bg-[#444ae5] m-6 p-3 rounded-lg shadow-md">Message sent successfully!</div>
+            <div className="alert success text-primary bg-[#444ae5] m-6 p-3 rounded-lg shadow-md">Thank you. I will get back to you as soon as possible.</div>
           )}
 
           {emailError && (
