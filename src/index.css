@@ -135,6 +135,12 @@
   transform: translateZ(0);
 }
 
+.alert {
+  z-index: 10;
+  margin: 20px auto;
+  text-align: center;
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {

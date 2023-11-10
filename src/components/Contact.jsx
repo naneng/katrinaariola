@@ -1,11 +1,15 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-// import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+// import { Formik, Form, Field } from 'formik';
+// import * as Yup from 'yup';
 
 import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+
+
 
 const Contact = () => {
   const formRef = useRef();
@@ -16,8 +20,52 @@ const Contact = () => {
   })
 
   const [loading, setLoading] = useState(false);
-  const handleChange = (e) => { }
-  const handleSubmit = (e) => { }
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+
+
+  const handleChange = (e) => { 
+    const { name, value } = e.target;
+    setForm({...form, [name]: value})
+  }
+
+  const handleSubmit = (e) => { 
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+      'service_lp4pfm5',
+      'template_84txx99',
+      {
+        from_name: form.name,
+        to_name: 'Katrina',
+        from_email: form.email,
+        to_email: 'kat3ariola@gmail.com',
+        message: form.message,
+      },
+      'HH5EwaZnD7e2OKCbF'
+    )
+      .then(() => {
+        setLoading(false);
+        setEmailSent(true);
+        setEmailError(false);
+        // alert('Thank you. I will get back to you as soon as possible.');
+
+        setForm({
+          name: '',
+          email: '',
+          message: '',          
+        })
+
+      }, (error) => {
+        setLoading(false)
+        setEmailSent(false);
+        setEmailError(true);
+        console.log(error);
+        // alert('Something went wrong.')
+    })
+    // debugger;
+  }
 
   return (
     <div className="xl:mt-12 xl:flex-row flex flex-col-reverse overflow-hidden">
@@ -79,6 +127,16 @@ const Contact = () => {
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
+
+          {emailSent && (
+            <div className="alert success text-primary bg-[#444ae5] m-6 p-3 rounded-lg shadow-md">Message sent successfully!</div>
+          )}
+
+          {emailError && (
+            <div className="alert error text-white bg-[#bf61ff] m-6 p-3 rounded-lg shadow-md">Something went wrong. Please try again.</div>
+          )}
+      
+
       </motion.div>
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
