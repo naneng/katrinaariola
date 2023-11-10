@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import  { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from "@emailjs/browser";
 // import { Formik, Form, Field } from 'formik';
@@ -29,53 +29,94 @@ const Contact = () => {
     setForm({...form, [name]: value})
   }
 
-  // const validationSchema = Yup.object({
-  //   name: Yup.string().required('Name is required'),
-  //   email: Yup.string().email('Invalid email').required('Email is required'),
-  //   message: Yup.string().required('Message is required')
-  // });
+  const validationSchema = Yup.object({
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    message: Yup.string().required('Message is required')
+  });
 
 
-  const handleSubmit = (e) => { 
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.send(
-      'service_lp4pfm5',
-      'template_84txx99',
-      // process.env.EMAILJS_SERVICE_ID,
-      // process.env.EMAILJS_TEMPLATE_ID,
-      {
-        from_name: form.name,
-        to_name: 'Katrina',
-        from_email: form.email,
-        to_email: 'kat3ariola@gmail.com',
-        message: form.message,
-      },
-      'HH5EwaZnD7e2OKCbF'
-      // process.env.EMAILJS_PUBLIC_KEY
-    )
+    validationSchema
+      .validate(form)
       .then(() => {
-        setLoading(false);
-        setEmailSent(true);
-        setEmailError(false);
-        // alert('Thank you. I will get back to you as soon as possible.');
-
-        setForm({
-          name: '',
-          email: '',
-          message: '',          
-        })
-
-      }, (error) => {
-        setLoading(false)
-        setEmailSent(false);
-        setEmailError(true);
+        emailjs
+          .send(
+            'service_lp4pfm5',
+            'template_84txx99',
+            {
+              from_name: form.name,
+              to_name: 'Katrina',
+              from_email: form.email,
+              to_email: 'kat3ariola@gmail.com',
+              message: form.message,
+            },
+            'HH5EwaZnD7e2OKCbF'
+          )
+          .then(() => {
+            setLoading(false);
+            setEmailSent(true);
+            setEmailError(false);
+            setForm({
+              name: '',
+              email: '',
+              message: '',
+            });
+          })
+          .catch((error) => {
+            setLoading(false);
+            setEmailSent(false);
+            setEmailError(true);
+            console.log(error);
+          });
+      })
+      .catch((error) => {
         console.log(error);
-        // alert('Something went wrong.')
-    })
-   
+        setLoading(false);
+      });
   }
+
+      
+
+    // emailjs.send(
+    //   'service_lp4pfm5',
+    //   'template_84txx99',
+    //   // process.env.EMAILJS_SERVICE_ID,
+    //   // process.env.EMAILJS_TEMPLATE_ID,
+    //   {
+    //     from_name: form.name,
+    //     to_name: 'Katrina',
+    //     from_email: form.email,
+    //     to_email: 'kat3ariola@gmail.com',
+    //     message: form.message,
+    //   },
+    //   'HH5EwaZnD7e2OKCbF'
+    //   // process.env.EMAILJS_PUBLIC_KEY
+    // )
+    //   .then(() => {
+    //     setLoading(false);
+    //     setEmailSent(true);
+    //     setEmailError(false);
+        
+
+    //     setForm({
+    //       name: '',
+    //       email: '',
+    //       message: '',          
+    //     })
+
+    //   }, (error) => {
+    //     setLoading(false)
+    //     setEmailSent(false);
+    //     setEmailError(true);
+    //     console.log(error);
+       
+    // })
+   
+  
 
   return (
     <div className="xl:mt-12 xl:flex-row flex flex-col-reverse overflow-hidden">
