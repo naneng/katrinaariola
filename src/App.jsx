@@ -38,7 +38,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        {/* <LoadingBar color='#915eff' ref={loadingBarRef} /> */}
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
@@ -50,7 +49,6 @@ const App = () => {
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
-          {/* {showBottomBar && <BottomBar />} */}
         </div>
       </div>
     </BrowserRouter>
