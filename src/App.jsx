@@ -2,7 +2,7 @@
 // import { useProgress } from "@react-three/drei";
 // import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { BrowserRouter } from 'react-router-dom';
-import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
+import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas, Links } from './components';
 // import LoadingBar from 'react-top-loading-bar';
 
 const App = () => {
@@ -50,6 +50,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
+        <Links />
       </div>
     </BrowserRouter>
   )

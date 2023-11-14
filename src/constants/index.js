@@ -161,7 +161,7 @@ const experiences = [
       "Managed and maintained department website to match various team specifications ensuring up-to- date contents and active links.",
       "Designed layouts, graphics, icons, logos and created and/or incorporated color scheme based on internal website requests.",
       "Researched and evaluated new design trends.",
-      "Performed software and hardware installations and updates for office computers associated devises.",
+      "Performed software and hardware installations and updates for office computers associated devices.",
     ],
   },
   
