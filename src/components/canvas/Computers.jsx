@@ -3,8 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-import CanvasLoader from '../Loader';
 import PropTypes from 'prop-types';
+import CanvasLoader from '../Loader';
 
 
 
@@ -14,7 +14,6 @@ const Computers = ({isMobile}) => {
   return (
     <mesh>
       <hemisphereLight intensity={0.95} groundColor="black" />
-      <pointLight intensity={2} />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.32}
@@ -23,6 +22,7 @@ const Computers = ({isMobile}) => {
         castShadow
         shadow-mapSize={1024}
       />
+      <pointLight intensity={2} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
@@ -41,6 +41,8 @@ Computers.propTypes = {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+
+  
 
   useEffect(() => {
     //checks that medea matches 500px
@@ -64,7 +66,7 @@ const ComputersCanvas = () => {
     return () => {
       mediaQuery.removeEventListener('change',
         handleMediaQueryChange);
-    }
+    };
     
   }, [])
 
