@@ -18,7 +18,7 @@ import reactjs from "./tech/reactjs.png";
 import sql from "./tech/sql.png";
 import p5 from "./tech/p5.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
+// import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import canva from "./tech/canva.png";
 
@@ -49,7 +49,7 @@ export {
   mongodb,
   nodejs,
   reactjs,
-  typescript,
+  // typescript,
   p5,
   tailwind,
   canva,
