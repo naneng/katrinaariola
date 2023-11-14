@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import * as Yup from 'yup';
 
 import { styles } from '../styles';
-import { EarthCanvas } from './canvas';
+import { EarthCanvas, StarsCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 
@@ -195,6 +195,7 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+      {/* <StarsCanvas /> */}
 
     </div>
   )

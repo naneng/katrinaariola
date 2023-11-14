@@ -10,7 +10,10 @@ module.exports = {
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
+  react: {
+      version: 'detect' 
+    },
+  plugins: ['react-refresh', 'react', 'react-hooks'],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
@@ -18,7 +21,8 @@ module.exports = {
     ],
     'react/no-unknown-property': [
       'error',
-      { ignore: ['jsx','css'] },
+      { ignore: ['jsx','css', 'js', ] },
     ],
+    'react/prop-types': 'error' ,
   },
 }

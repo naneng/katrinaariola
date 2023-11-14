@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "http://naneng.github.io/katrinaariola",
-
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
@@ -15,7 +14,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "@react-three/drei": "^9.88.11",
+    "@react-three/drei": "^9.88.13",
     "@react-three/fiber": "^8.15.10",
     "formik": "^2.4.5",
     "framer-motion": "^10.16.4",

@@ -1,9 +1,12 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 import CanvasLoader from '../Loader';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+
+
 
 const Computers = ({isMobile}) => {
   const computer = useGLTF('./desktop_pc/scene.gltf')
@@ -25,14 +28,15 @@ const Computers = ({isMobile}) => {
         scale={isMobile ? 0.7 : 0.75}
         position={isMobile ? [0,-3,-2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01,-0.2,-0.1]}
-        />
+      />
     </mesh>
   )
 }
 
-// Computers.propTypes = {
-//   isMobile: PropTypes.bool.isRequired,
-// }
+Computers.propTypes = {
+  isMobile: PropTypes.bool.isRequired,
+}
+
 
 
 const ComputersCanvas = () => {
@@ -74,6 +78,8 @@ const ComputersCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+          enableDamping
+          dampingFactor={0.05}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

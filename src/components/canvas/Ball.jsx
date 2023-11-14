@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei';
-
+import PropTypes from 'prop-types';
 import CanvasLoader from '../Loader';
 
 const Ball = (props) => {
@@ -33,6 +33,9 @@ const Ball = (props) => {
 
   )
 }
+Ball.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+};
 
 const BallCanvas = ({icon}) => {
   return (
@@ -41,7 +44,7 @@ const BallCanvas = ({icon}) => {
       gl={{preserveDrawingBuffer: true}}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableDamping dampingFactor={0.05} enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
       <Preload all />
@@ -49,4 +52,7 @@ const BallCanvas = ({icon}) => {
   )
 }
 
+BallCanvas.propTypes = {
+  icon: PropTypes.string.isRequired,
+};
 export default BallCanvas
