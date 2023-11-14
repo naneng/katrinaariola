@@ -16,7 +16,8 @@ const Computers = ({isMobile}) => {
       <Float  speed={1.75} rotationIntensity={1} floatIntensity={2}></Float>
       <hemisphereLight intensity={0.95} groundColor="black" />
       <spotLight
-        position={[-20, 50, 10]}
+        // position={[-20, 50, 10]}
+        position={isMobile ? [-100, 80, -10] : [-20, 50, 10]}
         angle={0.32}
         penumbra={1}
         intensity={4}
