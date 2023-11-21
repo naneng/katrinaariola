@@ -212,7 +212,7 @@ const projects = [
       },
       {
         name: "yup",
-        color: "pink-text-gradient",
+        color: "white",
       },
     ],
     image: moody,
@@ -233,7 +233,7 @@ const projects = [
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "white",
       },
     ],
     image: bookclub,
@@ -250,7 +250,7 @@ const projects = [
       },
       {
         name: "css",
-        color: "pink-text-gradient",
+        color: "white",
       },
     ],
     image: tictactoe,
@@ -268,7 +268,7 @@ const projects = [
   
       {
         name: "javascript",
-        color: "pink-text-gradient",
+        color: "white",
       },
     ],
     image: temperatureconverter,

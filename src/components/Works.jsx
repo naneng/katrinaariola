@@ -15,25 +15,14 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         max: 45,
         scale: 1,
         speed:450,
-      }} className="bg-[#250657] p-5 rounded-2xl sm:w-[360px] w-full"
+      }} className="bg-[#161037] p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
           <img src={image}
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="violet-gradient  w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
+          
         </div>
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">
@@ -53,6 +42,18 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             </p>
           ))}
         </div>
+        <div className="absolute bottom-0 right-0 flex justify-end m-3 card-img_hover ">
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border-solid border-2 hover:bg-violet-500 "
+            >
+              <img
+                src={github}
+                alt="github"
+                className="w-1/2 h-1/2 object-contain"
+              />
+            </div>
+          </div>
 
       </Tilt>
 
