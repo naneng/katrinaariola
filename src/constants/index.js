@@ -23,6 +23,7 @@ import {
   temperatureconverter,
   bookclub,
   tictactoe,
+  projectlist,
   threejs,
 } from "../assets";
 
@@ -273,6 +274,31 @@ const projects = [
     ],
     image: temperatureconverter,
     source_code_link: "https://naneng.github.io/temperature-converter/",
+  },
+  {
+    name: "Project List",
+    description:
+      "A list of projects I developed over time including course projects developed with Le Wagon and SuperHi.",
+    tags: [
+      {
+        name: "javascript",
+        color: "white",
+      },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "lodash",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "white",
+      },
+    ],
+    image: projectlist,
+    source_code_link: "https://naneng.github.io/projects.html",
   },
 ];
 

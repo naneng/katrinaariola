@@ -31,6 +31,7 @@ import moody from "./moody.png";
 import temperatureconverter from "./temperatureconverter.png";
 import bookclub from "./bookclub.png";
 import tictactoe from "./tictactoe.png";
+import projectlist from "./projects.png";
 
 export {
   logo,
@@ -62,5 +63,6 @@ export {
   moody,
   temperatureconverter,
   bookclub,
-  tictactoe
+  tictactoe,
+  projectlist
 };
